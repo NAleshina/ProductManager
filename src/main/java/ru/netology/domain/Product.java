@@ -40,24 +40,9 @@ public class Product {
     this.price = price;
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Product product = (Product) o;
-    return id == product.id &&
-            price == product.price &&
-            Objects.equals(name, product.name);
-  }
 
-  public boolean matches(Product product, String search) {
-    if (product instanceof Product) {
-      Product product1 = (Product) product;
-      if (product1.getName().equalsIgnoreCase(search)) {
-        return true;
-      }
-      return false;
-    } else { return false; }
+  public boolean matches(String search) {
+    return this.getName().equalsIgnoreCase(search);
   }
 
   @Override

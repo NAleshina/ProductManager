@@ -27,7 +27,7 @@ class ProductManagerTest {
     private Smartphone phone2 = new Smartphone(4, "P40 128Gb", 39990, "Huawei");
 
     @Test
-    void searchBy() {
+    void shouldSearchByText() {
         Product[] returned = new Product[]{book1, book2, phone1, phone2};
         doReturn(returned).when(repository).findAll();
         Product[] actual = manager.searchBy("Head First Java");
