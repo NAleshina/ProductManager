@@ -32,16 +32,4 @@ public class Book extends Product {
             '}';
   }
 
-  public boolean matches(Product product, String search) {
-    if (product instanceof Book) {
-      Book book = (Book) product;
-      if (book.getName().equalsIgnoreCase(search)) {
-        return true;
-      }
-      if (book.getAuthor().equalsIgnoreCase(search)) {
-        return true;
-      }
-      return false;
-    } else {return false;}
-  }
 }
