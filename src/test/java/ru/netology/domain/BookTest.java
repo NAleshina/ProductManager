@@ -11,14 +11,12 @@ class BookTest {
     @Test
     void shouldMatchesName() {
         boolean actual = book1.matches("Head First Java");
-        boolean expected = true;
-        assertEquals(expected, actual);
+        assertTrue(actual);
     }
 
     @Test
     void shouldMatchesAuthor() {
         boolean actual = book2.matches("Robert Sedgewick");
-        boolean expected = true;
-        assertEquals(expected, actual);
+        assertTrue(actual);
     }
 }

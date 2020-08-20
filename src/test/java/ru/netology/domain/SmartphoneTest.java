@@ -11,14 +11,12 @@ class SmartphoneTest {
     @Test
     void shouldMatchesName() {
         boolean actual = phone2.matches("P40 128Gb");
-        boolean expected = true;
-        assertEquals(expected, actual);
+        assertTrue(actual);
     }
 
     @Test
     void shouldMatchesManufacturer() {
         boolean actual = phone1.matches("Samsung");
-        boolean expected = true;
-        assertEquals(expected, actual);
+        assertTrue(actual);
     }
 }
